@@ -1,2 +1,2 @@
 # C-Basics
-C Basic exercises form my college
+C Basic exercises from my college
