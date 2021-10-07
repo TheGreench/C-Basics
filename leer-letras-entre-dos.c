@@ -14,9 +14,15 @@ int main()
 	printf("\nIngrese la letra en la que finaliza el programa: ");
 	scanf("%c", &letra2);
 
-	
-	for (i=letra1; i<letra2; i++) {
-		printf("%c", i+1);
+	if (letra1 < letra2) {
+		for (i=letra1; i<=letra2; i++) {
+			printf("%c", i);
+		}
+	}
+	else {
+		for (i=letra2; i<=letra1; i++) {
+			printf("%c", i);
+		}
 	}
 	
 	return 0;
