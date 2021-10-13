@@ -7,35 +7,27 @@ contrario deberá devolver el valor calculado.
 
 #include <stdio.h>
 
-int factorial(int n) {
-	if (n >= 0) {
-		return 0;
-	}
-	
+int cal_factorial(int n) {
 	int i;
 	int producto = 1;
 		
 	for (i = n; i > 1; i--) {
 		producto *= i;
-	}
-	
+	}	
+
 	return producto;
 }
 
 int main(void) {
 	int num, fact;
 	
-	printf("Dar un entero entre para calcular el factorial: ");
+	printf("Dar un entero entre para calcular el factorial (1 al 15): ");
 	scanf("%d", &num);
-	
-	if (num > 0) {
-		fact = factorial(num);
+	// Menor q 16 ya que sino se van a muy grandes
+	if (num > 0 && num < 16) {
+		fact = cal_factorial(num);
 		printf("El factorial de %d es %d\n", num, fact);
-		
-	}
-	else {
-		fact = 0;
-	}
+	} else fact = 0;
 	
 	return fact;
 }
