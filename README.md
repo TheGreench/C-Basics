@@ -1,2 +1,2 @@
 # C-Basics
-C Basic exercises from my college
+Ejrcicios basicos de c, algoritmos y programacion 1
