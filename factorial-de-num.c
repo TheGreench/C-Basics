@@ -15,19 +15,20 @@ int cal_factorial(int n) {
 		producto *= i;
 	}	
 
-	return producto;
+	return (producto);
 }
 
-int main(void) {
+void main() {
 	int num, fact;
 	
 	printf("Dar un entero entre para calcular el factorial (1 al 15): ");
 	scanf("%d", &num);
-	// Menor q 16 ya que sino se van a muy grandes
+	
 	if (num > 0 && num < 16) {
 		fact = cal_factorial(num);
 		printf("El factorial de %d es %d\n", num, fact);
-	} else fact = 0;
+	} 
+	else fact = 0;
 	
-	return fact;
+	return (fact);
 }
