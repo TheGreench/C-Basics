@@ -1,6 +1,4 @@
 /*
-Nicolas Invernizzi - 108761
-
 [ Tarea ]
 
 Leer una fecha de nacimiento Año, Mes, Dia.
