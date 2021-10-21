@@ -19,9 +19,13 @@ void leerValidaNumero(int *numero, int minNum, int maxNum) {
 }
 
 bool es_bisiesto(int valor) {
-	bool biOno = false;
+	bool biOno;
 
-	if (valor % 4 == 0)
+	if (valor % 4 == 0 || valor % 100 != 0)
+		biOno = true;
+	else if (valor % 400 != 0)
+		biOno = false;
+	else 
 		biOno = true;
 		
 	return biOno;
@@ -50,7 +54,7 @@ int calcularDiasAnio(int valorDia, int valorMes, int valorAnio) {
 	dias = valorDia;
 	
 	for (i = 1; i < valorMes; i++) {
-		dias = dias + MaxDia(valorMes, valorAnio);
+		dias = dias + MaxDia(i, valorAnio);
 	}
 	
 	return dias;
