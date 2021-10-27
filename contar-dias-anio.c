@@ -34,13 +34,11 @@ bool es_bisiesto(int valor) {
 int MaxDia(int valorMes, int valorAnio) {
 	int valorMax;
 	
-	if (valorMes == 2) {
+	if (valorMes == 2)
 		if (es_bisiesto(valorAnio)) {
 			valorMax = 29;
-		}
-		else {
+		else
 			valorMax = 28;
-		}
 	}
 	else if (valorMes == 4 || valorMes == 6 || valorMes == 9 || valorMes  == 11)
 		valorMax = 30;
