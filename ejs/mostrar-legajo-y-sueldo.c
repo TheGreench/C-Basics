@@ -11,7 +11,35 @@ Se sabe que no son mas de 1000 empleados en la empresa y la carga finaliza con l
 typedef int tvLegajos[MAX];
 typedef float tvSueldos[MAX];
 
-void main () {
+// Inicio Grupo 3
+void cargar_datos(tvLegajos vLegajos, tvSueldos vSueldos, int ml) {
+  int input;
+  ml = 0;
+  while (input != 0) {
+    for(int i=0; i<ml; i++) {
+      printf("\nIngrese el legajo: ");
+      scanf("%d", &vLegajos[i]);
+
+      input = vLegajos[i];
+
+      printf("\nIngrese el sueldo del legajo: %d = ", vLegajos[i]);
+      scanf("%f", &vSueldos[i]);
+
+      ml++;
+    }
+  }
+}
+
+void mostrar_inferiores(tvLegajos vLegajos, tvSueldos vSueldos, int ml, float sueldo) {
+  printf("[ Mostrando sueldos menores a la mitad del sueldo maximo ]");
+  for (int i = 0; i < ml; i++) {
+    if(vSueldos[i]<(sueldo)/2)
+      printf("%d %f", vLegajos[i], vSueldos[i]);
+  }
+}
+// Fin Grupo 3
+
+void main() {
   tvLegajos vLegajos;
   tvSueldos vSueldos;
   
