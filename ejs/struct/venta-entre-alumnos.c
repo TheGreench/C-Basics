@@ -11,7 +11,6 @@ XXXXXXXXXXXX    YYYYYYYYYYYYYY          1       1231
 - Los string tienen un máximo de 30 caracteres */            
 
 
-
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
@@ -32,3 +31,27 @@ int Grupo;
 
 
 typedef TProducto TTablaProdutos[MAX_PRODUCTOS];
+
+// Ej4
+// Ordenando por burbujeo
+void listado_caros(TProducto productos[MAX_PRODUCTOS]){
+  int i,j;
+  TProducto temp;
+
+  for (i=1; i<MAX_PRODUCTOS; i++) {
+    for(j=0; j<MAX_PRODUCTOS-i; j++) {
+      if (productos[j].Precio > productos[j+1].Precio) {
+        temp = productos[j];
+        productos[j] = productos[j + 1];
+        productos[j + 1] = temp;
+      }
+    }
+  }
+
+  printf("Mostrando los 10 productos mas caros: \n");
+  printf("Nombre | Descripción | Grupo | Código\n");
+  for(i=MAX_PRODUCTOS-1; i>MAX_PRODUCTOS-11; i--) {
+    printf("%s | %s | %i | %i\n", productos[i].Nombre, productos[i].Descripcion, productos[i].Grupo, productos[i].Codigo);
+  }
+}
+// Ej4
