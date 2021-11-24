@@ -32,13 +32,20 @@ int Grupo;
 
 typedef TProducto TTablaProdutos[MAX_PRODUCTOS];
 
-// Ej4
+// EJ-4
 // Ordenando por burbujeo
+void mostrar(TProducto productos[MAX_PRODUCTOS]) {
+  int i;
+  printf("Nombre | Descripción | Grupo | Código\n");
+  for(i=MAX_PRODUCTOS-1; i>MAX_PRODUCTOS-11; i--) {
+    printf("%s | %s | %i | %i\n", productos[i].Nombre, productos[i].Descripcion, productos[i].Grupo, productos[i].Codigo);
+  }
+}
 void listado_caros(TProducto productos[MAX_PRODUCTOS]){
   int i,j;
   TProducto temp;
 
-  for (i=1; i<MAX_PRODUCTOS; i++) {
+  for (i=1; i<=10; i++) {
     for(j=0; j<MAX_PRODUCTOS-i; j++) {
       if (productos[j].Precio > productos[j+1].Precio) {
         temp = productos[j];
@@ -47,11 +54,8 @@ void listado_caros(TProducto productos[MAX_PRODUCTOS]){
       }
     }
   }
-
+  
   printf("Mostrando los 10 productos mas caros: \n");
-  printf("Nombre | Descripción | Grupo | Código\n");
-  for(i=MAX_PRODUCTOS-1; i>MAX_PRODUCTOS-11; i--) {
-    printf("%s | %s | %i | %i\n", productos[i].Nombre, productos[i].Descripcion, productos[i].Grupo, productos[i].Codigo);
-  }
+  mostrar(productos);
 }
-// Ej4
+// EJ-4
