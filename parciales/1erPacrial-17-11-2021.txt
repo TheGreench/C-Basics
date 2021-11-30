@@ -1,4 +1,4 @@
-/* 
+/* ENUNCIADO EJERCICIO 1
 Escribir una función en C que reciba como parámetro un numero entero y devuelva al modulo invocante los siguientes valores:
 - el resultado de multiplicar sus digitos pares y
 - la cantidad de digitos que cumplieron la condicion y fueron procesados. 
@@ -20,6 +20,8 @@ Escribir un programa que invoque dicha funcion y la pruebe con los siguientes va
 Nota: para la resolucion de este ejercicio no se pueden utilizar arreglos.
 
 */
+
+
 /* ENUNCIADO EJERCICIO 2
 
 Implementar la funcion ejercicio_2 que reciba una vector de caracteres (maximo 1000) que equivale a un texto terminado en '.'
@@ -33,6 +35,7 @@ Por ejemplo:
   El resultado debe ser: 7
 
 */
+
 
 /* ENUNCIADO EJERCICIO 3
 Implementar la función ejercicio_3 que reciba una matriz cargada con números enteros entre 0 
