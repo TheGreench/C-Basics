@@ -1,0 +1,54 @@
+/* 
+Escribir una función en C que reciba como parámetro un numero entero y devuelva al modulo invocante los siguientes valores:
+- el resultado de multiplicar sus digitos pares y
+- la cantidad de digitos que cumplieron la condicion y fueron procesados. 
+
+Por ejemplo: 
+
+-> el número con el que se invoca la funcion es 25831 
+-> los digitos pares son 2 y 8 
+-> La funcion debe devolver: Producto = 16 Digitos Procesados = 2
+
+Escribir un programa que invoque dicha funcion y la pruebe con los siguientes valores:
+
+25831 	=> Producto = 16 Digitos Procesados 2
+444	        => Producto = 64 Digitos Procesados 3
+1357	=> Producto = 0 Digitos Procesados 0
+2468	=> Producto = 384 Digitos Procesados 4
+8230	=> Producto = 0 Digitos Procesados 3
+
+Nota: para la resolucion de este ejercicio no se pueden utilizar arreglos.
+
+*/
+/* ENUNCIADO EJERCICIO 2
+
+Implementar la funcion ejercicio_2 que reciba una vector de caracteres (maximo 1000) que equivale a un texto terminado en '.'
+La funcion debe devolver la cantidad de vocales que se encuentran en el texto.
+Considerar que solo se puede recorrer una vez el vector y las letras son solo mayusculas.
+
+Por ejemplo:
+
+  HOLA, EJERCICIO 2.
+
+  El resultado debe ser: 7
+
+*/
+
+/* ENUNCIADO EJERCICIO 3
+Implementar la función ejercicio_3 que reciba una matriz cargada con números enteros entre 0 
+y 100, y el máximo lógico de filas y el de columnas de ésta.
+
+La función debe mostrar pantalla los numeros que NO están almacenados en la estructura.
+
+Considerar que solo se puede recorrer una vez la matriz. Está permitida la utilización de un vector auxiliar.
+
+Por ejemplo:
+
+  se tiene la siguiente matriz de 3x3 -> {{56, 89, 56}, {78, 23, 11}, {75, 56, 11}}
+
+El resultado debe ser:
+0 1 2 3 4 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 76 77 79 80 81 82 83 84 85 86 87 88 90 91 92 93 94 95 96 97 98 99 100
+
+NOMBRA TU ARCHIVO DE LA SIGUIENTE FORMA: padrón_apellido_ej3.c  reemplazando padrón por tu padrón y apellido, por tu apellido.
+
+*/
