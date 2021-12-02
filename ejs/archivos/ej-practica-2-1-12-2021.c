@@ -25,15 +25,16 @@ void mostrar_datos(FILE *telRegistros, int localidad) {
   telRegistros = fopen("telRegistros.dat", "rb");
 
   if (telRegistros == NULL) 
-    printf("ERR");
+    printf("ERROR: No hay archivo llamado 'telRegistros.dat' !");
   else {
-    while (!feof(telRegistros)){
+    printf("localida-central-numero");
+    while (!feof(telRegistros)) {
       fread(&nRegistros, sizeof(nRegistros), 1, telRegistros);
-      if (nRegistros.localidad == localidad){
+      if (nRegistros.localidad == localidad) {
         printf("%i-%i-%i",nRegistros.localidad, nRegistros.central, nRegistros.numero);
       }
     }
-    
+    fclose(telRegistros);
   }
 }
 
