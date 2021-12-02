@@ -32,8 +32,7 @@ void mostrar_datos(FILE *telRegistros, int localidad) {
       fread(&nRegistros, sizeof(nRegistros), 1, telRegistros);
       if (nRegistros.localidad == localidad)
         printf("%i-%i-%i",nRegistros.localidad, nRegistros.central, nRegistros.numero);
-      else
-        printf("No hay numeros con esa localidad!");
+        // printf("No hay numeros con esa localidad!");
     }
     fclose(telRegistros);
   }
