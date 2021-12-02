@@ -21,18 +21,19 @@ typedef struct{
 
 void mostrar_datos(FILE *telRegistros, int localidad) {
   t_nRegistro nRegistros;
-  int i=0;
+  int i=0; // ?
   telRegistros = fopen("telRegistros.dat", "rb");
 
   if (telRegistros == NULL) 
     printf("ERROR: No hay archivo llamado 'telRegistros.dat' !");
   else {
-    printf("localida-central-numero");
+    fread(&nRegistros, sizeof(nRegistros), 1, telRegistros);
+    printf("Localidad Central Numero\n");
+    
     while (!feof(telRegistros)) {
-      fread(&nRegistros, sizeof(nRegistros), 1, telRegistros);
       if (nRegistros.localidad == localidad)
-        printf("%i-%i-%i",nRegistros.localidad, nRegistros.central, nRegistros.numero);
-        // printf("No hay numeros con esa localidad!");
+        printf("%i-%i-%i\n",nRegistros.localidad, nRegistros.central, nRegistros.numero);
+      fread(&nRegistros, sizeof(nRegistros), 1, telRegistros);
     }
     fclose(telRegistros);
   }
@@ -48,3 +49,5 @@ int main(void) {
 
   return 0;
 }
+//you are the mas
+//esta cargado como el orto igual jsjsjsj ahora lo veo
