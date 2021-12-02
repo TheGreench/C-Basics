@@ -42,12 +42,30 @@ void mostrar_datos(FILE *telRegistros, int localidad) {
 int main(void) {
   FILE *telRegistros;
   int localidad;
+  int num;
 
+
+/*
+telRegistros = fopen("telRegistros.dat", "w");
+  do{
+    printf("localidad:");
+    scanf("%i", &reg.localidad);
+    printf("central:");
+    scanf("%i", &reg.central);
+    printf("numero:");
+    scanf("%i", &reg.numero);
+    fwrite(&reg, sizeof(reg), 1, telRegistros);
+    printf("continuar?");
+    scanf("%i", &num);
+    printf("\n%i  -  %i  -  %i\n\n", reg.localidad, reg.central, reg.numero);
+  } while(num != 0);
+  fclose(telRegistros);
+*/
   printf("Ingrese una caracteristica de localidad (4 digitos): ");
   scanf("%i", &localidad);
   mostrar_datos(telRegistros, localidad);
 
   return 0;
 }
-//you are the mas
-//esta cargado como el orto igual jsjsjsj ahora lo veo
+
+// Gracias
