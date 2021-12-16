@@ -47,7 +47,7 @@ void Merge (FILE *FIUBA, FILE *EXUBA, FILE *FINAL) {
 
   fclose(FIUBA);
   fclose(EXUBA);
-
+  fclose(FINAL);
 }
 
 
